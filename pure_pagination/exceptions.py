@@ -1,5 +1,4 @@
-class InvalidPage(Exception):
-    pass
+from django.core.paginator import InvalidPage
 
 
 class PageNotAnInteger(InvalidPage):
