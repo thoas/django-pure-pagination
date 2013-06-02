@@ -2,8 +2,7 @@ from datetime import datetime
 
 from django.test import TestCase
 
-from pure_pagination.paginator import Paginator
-from pure_pagination.exceptions import InvalidPage, EmptyPage
+from pure_pagination.paginator import Paginator, InvalidPage, EmptyPage
 
 from .models import Article
 
