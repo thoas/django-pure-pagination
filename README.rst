@@ -193,18 +193,18 @@ view file:
 * **views.py**
 
     ::
-    
+
         # views.py
         from django.views.generic import ListView
-        
+
         from pure_pagination.mixins import PaginationMixin
-        
+
         from my_app.models import MyModel
-    
-    
+
+
         class MyModelListView(PaginationMixin, ListView):
             # Important, this tells the ListView class we are paginating
-            paginate_by = 10 
+            paginate_by = 10
             # Replace it for your model or use the queryset attribute instead
             object = MyModel
 
@@ -215,7 +215,7 @@ Note that the Django generic-based list view will include the object **page_obj*
 * **_pagination.html**
 
     ::
-    
+
         {% load i18n %}
         <div class="pagination">
             {% if page_obj.has_previous %}
@@ -244,19 +244,19 @@ Note that the Django generic-based list view will include the object **page_obj*
 *  **my_app/myobject_list.html**
 
     ::
-    
+
         {# my_app/myobject_list.html #}
         {% extends 'base.html' %}
-    
+
         {% block content %}
-    
+
         {% for object in object_list %}
             <div>
                 First name: {{ object.first_name }}
             </div>
         {% endfor %}
-    
+
         {# The following renders the pagination html #}
         {% include "_pagination.html" %}
-    
-        {% endblock %}    
+
+        {% endblock %}
