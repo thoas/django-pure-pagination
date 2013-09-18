@@ -73,7 +73,7 @@ class Page(BasePage):
     @page_querystring
     def pages(self):
         if self.paginator.num_pages <= settings.PAGE_RANGE_DISPLAYED:
-            return range(1, self.paginator.num_pages + 1)
+            return list(range(1, self.paginator.num_pages + 1))
         result = []
         left_side = settings.PAGE_RANGE_DISPLAYED / 2
         right_side = settings.PAGE_RANGE_DISPLAYED - left_side
