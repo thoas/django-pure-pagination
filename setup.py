@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name='django-pure-pagination',
-    version='0.2',
+    version='0.2.1',
     author='James Pacileo',
     long_description=open('README.rst').read(),
     license='BSD',
