@@ -3,8 +3,8 @@ from distutils.core import setup
 
 setup(
     name='django-pure-pagination',
-    version='0.2.1',
-    author='James Pacileo',
+    version='0.2.2',
+    author='Florent Messa',
     long_description=open('README.rst').read(),
     license='BSD',
     keywords='pagination, django',
@@ -14,8 +14,8 @@ setup(
         "Framework :: Django",
         "Environment :: Web Environment",
     ],
-    author_email='jamespacileo@gmail.com',
-    url='https://github.com/jamespacileo/django-pure-pagination/',
+    author_email='florent.messa@gmail.com',
+    url='https://github.com/thoas/django-pure-pagination/',
     packages=['pure_pagination'],
     include_package_data=True,
     zip_safe=False,
