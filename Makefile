@@ -4,3 +4,7 @@ pep8:
 test:
 	coverage run --branch --source=pure_pagination manage.py test pure_pagination
 	coverage report --omit=pure_pagination/test*
+
+release:
+	python setup.py register -r ulule
+	python setup.py sdist upload -r ulule
